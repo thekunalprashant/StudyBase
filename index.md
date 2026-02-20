@@ -15,19 +15,19 @@ title: The Compendium
 <div class="topic-list">
   <div class="topic-item">
     <h3><a href="{{ '/math/' | relative_url }}">Mathematics</a></h3>
-    <p>Techniques, strategies, and problem-solving patterns for competitive mathematics (AMC, AIME, etc.).</p>
+    <p>Advanced techniques and strategies for competitive math (AMC, AIME, Olympiads).</p>
     <div class="read-time">📚 Core Subject • Comprehensive Notes</div>
   </div>
 
-  <div class="topic-item" style="opacity: 0.7;">
-    <h3><a href="#">Coding & CS</a></h3>
-    <p>Algorithms, data structures, and software engineering patterns. (Coming Soon)</p>
+  <div class="topic-item" style="opacity: 0.8;">
+    <h3><a href="#">Computer Science</a></h3>
+    <p>Low-level systems, algorithms, and software engineering patterns.</p>
     <div class="read-time">💻 Future Addition • Under Development</div>
   </div>
 
-  <div class="topic-item" style="opacity: 0.7;">
-    <h3><a href="#">History & Arts</a></h3>
-    <p>Historical analysis, timelines, and architectural styles. (Coming Soon)</p>
+  <div class="topic-item" style="opacity: 0.8;">
+    <h3><a href="#">History & Humanities</a></h3>
+    <p>Chronological analysis, cultural impact studies, and historical timelines.</p>
     <div class="read-time">🏛️ Future Addition • Planned</div>
   </div>
 </div>
