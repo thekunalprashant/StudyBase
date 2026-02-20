@@ -3,14 +3,13 @@ layout: home
 title: Math Compendium
 ---
 
-<div class="page-header">
-  <h1>Competitive Mathematics Notes</h1>
-  <p class="description">Techniques, strategies, and problem-solving patterns for math competitions.</p>
-</div>
+# Competitive Mathematics Notes
+
+Techniques, strategies, and problem-solving patterns for math competitions.
 
 ---
 
-## <a name="topics"></a>Topics
+## Topics
 
 {% assign topic_pages = site.pages | where_exp: "page", "page.path contains 'topics/'" | where_exp: "page", "page.name == 'index.md'" %}
 
@@ -19,17 +18,17 @@ title: Math Compendium
 {% assign read_time = word_count | divided_by: 200 %}
 {% if read_time == 0 %}{% assign read_time = 1 %}{% endif %}
 
-<div class="topic-card">
-  <h3><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></h3>
-  <p>{{ topic.description | default: "Competition math techniques" }}</p>
-  <div class="topic-meta">⏱️ {{ read_time }} min read</div>
-</div>
+### [{{ topic.title }}]({{ topic.url | relative_url }})
 
+{{ topic.description | default: "Competition math techniques" }}
+
+⏱️ {{ read_time }} min read
+
+---
 {% endfor %}
 
 ---
 
-<div class="content-section">
-  <h2>Contribute</h2>
-  <p>Found an error or want to add a topic? <a href="https://github.com/thekunalprashant/math-compendium/fork" target="_blank">Fork on GitHub</a> and submit a pull request.</p>
-</div>
+## Contribute
+
+Found an error or want to add a topic? [Fork on GitHub](https://github.com/thekunalprashant/math-compendium/fork) and submit a pull request.
