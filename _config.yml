@@ -1,7 +1,7 @@
 title: "Math Compendium"
 description: "Competitive mathematics techniques and notes"
 theme: minima
-baseurl: "/math-compendium"  # ← ADD THIS
+baseurl: "/math-compendium"
 url: "https://thekunalprashant.github.io"
 
 markdown: kramdown
@@ -12,3 +12,7 @@ plugins:
   - jekyll-feed
 
 words_per_minute: 200
+
+# Custom variables
+popular_topics:
+  - Value Substitution

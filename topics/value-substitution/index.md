@@ -2,6 +2,8 @@
 layout: page
 title: Value Substitution
 description: Master the art of solving complex problems in 12-30 seconds
+date: 2026-02-20
+popular: true
 permalink: /topics/value-substitution/
 ---
 

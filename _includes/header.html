@@ -7,9 +7,12 @@
         <a class="page-link" href="{{ '/' | relative_url }}">Home</a>
         
         {% assign topic_pages = site.pages | where_exp: "page", "page.path contains 'topics/'" | where_exp: "page", "page.name == 'index.md'" | sort: "title" %}
-        {% for topic in topic_pages %}
+        {% for topic in topic_pages limit:3 %}
           <a class="page-link" href="{{ topic.url | relative_url }}">{{ topic.title | escape }}</a>
         {% endfor %}
+        
+        <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
+        <a class="page-link" href="https://github.com/thekunalprashant/math-compendium/fork" target="_blank">Contribute ↗</a>
       </div>
     </nav>
   </div>
