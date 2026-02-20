@@ -5,18 +5,59 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-    {% if page.description %}
-    <p class="post-description">{{ page.description }}</p>
-    {% endif %}
   </header>
 
   <div class="post-content">
-    {{ content }}
-  </div>
+    <div class="wrapper">
+      {{ content }}
 
-  <div class="post-navigation">
-    <a href="{{ '/' | relative_url }}" class="back-link">← Back to Home</a>
+      <div class="post-navigation">
+        {% assign topic_pages = site.pages | where_exp: "page", "page.path contains 'topics/'" | where_exp: "page",
+        "page.name == 'index.md'" | where_exp: "page", "page.url != '/topics/'" | sort: "title" %}
+
+        {% for tp in topic_pages %}
+        {% if tp.url == page.url %}
+        {% assign currentIndex = forloop.index0 %}
+        {% assign prevIndex = currentIndex | minus: 1 %}
+        {% assign nextIndex = currentIndex | plus: 1 %}
+
+        {% if prevIndex >= 0 %}
+        {% assign prevTopic = topic_pages[prevIndex] %}
+        {% endif %}
+
+        {% assign nextTopic = topic_pages[nextIndex] %}
+        {% endif %}
+        {% endfor %}
+
+        <div class="topic-switcher">
+          {% if prevTopic %}
+          <div class="nav-direction prev">
+            <span class="nav-label">Previous Reading</span>
+            <a href="{{ prevTopic.url | relative_url }}" class="nav-card">
+              <span class="nav-arrow">←</span>
+              <span class="nav-title">{{ prevTopic.title }}</span>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if nextTopic %}
+          <div class="nav-direction next">
+            <span class="nav-label">Next Reading</span>
+            <a href="{{ nextTopic.url | relative_url }}" class="nav-card">
+              <span class="nav-title">{{ nextTopic.title }}</span>
+              <span class="nav-arrow">→</span>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+
+        <hr class="nav-divider">
+
+        <a href="{{ '/' | relative_url }}" class="back-link">
+          <span class="back-arrow">←</span> Back to Home
+        </a>
+      </div>
+    </div>
   </div>
 
 </article>

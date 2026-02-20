@@ -7,7 +7,6 @@ popular: true
 permalink: /topics/value-substitution/
 ---
 
-# Value Substitution
 ## The Competitive Mathematician's Guide
 
 *Master the art of solving complex problems in under 12-30 seconds*

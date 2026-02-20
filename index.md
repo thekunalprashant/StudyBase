@@ -3,28 +3,36 @@ layout: home
 title: Math Compendium
 ---
 
-# Competitive Mathematics Notes
+<div class="hero">
+  <h1>Math Compendium</h1>
+  <p>Techniques, strategies, and problem-solving patterns for competitive mathematics.</p>
+</div>
 
-Techniques, strategies, and problem-solving patterns for math competitions.
+<div class="wrapper">
 
----
+## Featured Methods
 
-## 🔥 Popular Topics
-
-{% assign popular = site.pages | where_exp: "page", "page.path contains 'topics/'" | where_exp: "page", "page.name == 'index.md'" | where: "popular", true %}
+<div class="topic-list">
+{% assign popular = site.pages | where_exp: "page", "page.path contains 'topics/'" | where_exp: "page", "page.name == 'index.md'" | where_exp: "page", "page.url != '/topics/'" | where: "popular", true %}
 {% if popular.size > 0 %}
 {% for topic in popular %}
-- **[{{ topic.title }}]({{ topic.url | relative_url }})** — {{ topic.description | default: "Competition math techniques" }}
+  <div class="topic-item">
+    <h3><a href="{{ topic.url | relative_url }}">{{ topic.title }}</a></h3>
+    <p>{{ topic.description | default: "Competition math techniques" }}</p>
+  </div>
 {% endfor %}
 {% else %}
-- **[Value Substitution]({{ '/topics/value-substitution/' | relative_url }})** — Master the art of solving complex problems in 12-30 seconds
+  <div class="topic-item">
+    <h3><a href="{{ '/topics/value-substitution/' | relative_url }}">Value Substitution</a></h3>
+    <p>Master the art of solving complex problems in 12-30 seconds</p>
+  </div>
 {% endif %}
+</div>
 
----
+## Compendium Index
 
-## 📚 All Topics (Newest First)
-
-{% assign topic_pages = site.pages | where_exp: "page", "page.path contains 'topics/'" | where_exp: "page", "page.name == 'index.md'" | sort: "date" | reverse %}
+<div class="topic-list">
+{% assign topic_pages = site.pages | where_exp: "page", "page.path contains 'topics/'" | where_exp: "page", "page.name == 'index.md'" | where_exp: "page", "page.url != '/topics/'" | sort: "date" | reverse %}
 
 {% if topic_pages.size > 0 %}
 {% for topic in topic_pages %}
@@ -32,35 +40,31 @@ Techniques, strategies, and problem-solving patterns for math competitions.
 {% assign read_time = word_count | divided_by: 200 %}
 {% if read_time == 0 %}{% assign read_time = 1 %}{% endif %}
 
-### [{{ topic.title }}]({{ topic.url | relative_url }}) {% if topic.popular %}🔥{% endif %}
-
-{{ topic.description | default: "Competition math techniques" }}
-
-⏱️ {{ read_time }} min read {% if topic.date %}• {{ topic.date | date: "%B %Y" }}{% endif %}
-
----
+  <div class="topic-item">
+    <h3>
+      <a href="{{ topic.url | relative_url }}">{{ topic.title }}</a> 
+      {% if topic.popular %}<span class="badge">Popular</span>{% endif %}
+    </h3>
+    <p>{{ topic.description | default: "Competition math techniques" }}</p>
+    <div class="read-time">⏱️ {{ read_time }} min read{% if topic.date %} • {{ topic.date | date: "%b %d, %Y at %I:%M %p" }}{% endif %}</div>
+  </div>
 {% endfor %}
 {% else %}
-*No topics yet.*
+  <p>No topics yet.</p>
 {% endif %}
+</div>
 
----
+## Future Additions
 
-## 🚀 Coming Soon
+<ul class="topic-list" style="display: list-item; list-style-type: none; padding: 0;">
+  <li class="topic-item" style="padding: 16px 32px; margin-bottom: 12px;">Inequalities (AM-GM, Cauchy-Schwarz)</li>
+  <li class="topic-item" style="padding: 16px 32px; margin-bottom: 12px;">Combinatorics & Counting</li>
+  <li class="topic-item" style="padding: 16px 32px; margin-bottom: 12px;">Number Theory</li>
+  <li class="topic-item" style="padding: 16px 32px; margin-bottom: 12px;">Geometry Strategies</li>
+</ul>
 
-- Inequalities (AM-GM, Cauchy-Schwarz)
-- Combinatorics & Counting
-- Number Theory
-- Geometry Strategies
-
----
-
-## 🤝 Contribute
+## Participation
 
 Want to add a topic? [Learn how to contribute →]({{ '/about/' | relative_url }})
 
----
-
-## About
-
-Personal notes documenting competition math techniques. Built for quick reference and rapid review before contests.
+</div>
