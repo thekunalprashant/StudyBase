@@ -3,61 +3,45 @@
 
 @import "minima";
 
-// Custom styles for Math Compendium
-
-.topic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+/* Topic list styling */
+.topic-list {
+  list-style: none;
+  padding: 0;
 }
 
-.topic-card {
+.topic-item {
   border: 1px solid #e8e8e8;
   border-radius: 8px;
   padding: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  
-  &:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  h3 {
-    margin-top: 0;
-    
-    a {
-      text-decoration: none;
-      
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+  margin-bottom: 1rem;
+  background: #fafafa;
 }
 
-.post-navigation {
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e8e8e8;
-  
-  .back-link {
-    font-weight: 500;
-    text-decoration: none;
-    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.topic-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
-// Better math rendering
-.MathJax {
-  font-size: 1.1em;
+.topic-item h3 a {
+  text-decoration: none;
+  color: #2a7ae2;
 }
 
-// Dark mode support (if using minima dark skin)
-@media (prefers-color-scheme: dark) {
-  .topic-card {
-    border-color: #444;
-  }
+.topic-item h3 a:hover {
+  text-decoration: underline;
+}
+
+.topic-item p {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.read-time {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Fix navigation spacing */
+.site-nav .page-link {
+  margin-left: 1rem;
 }

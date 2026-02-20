@@ -2,7 +2,7 @@ title: "Math Compendium"
 description: "Competitive mathematics techniques and notes"
 theme: minima
 baseurl: ""
-url: "https://thekunalprashant.github.io"
+url: "https://thekunalprashant.github.io/math-compendium/"
 
 markdown: kramdown
 kramdown:
