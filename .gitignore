@@ -1,0 +1,23 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby/Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.txt
+*.webp
+*.png
+.gemini/
+.agent/
+brain/
