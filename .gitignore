@@ -9,9 +9,10 @@ _site/
 vendor/
 Gemfile.lock
 
-# OS Files
+# OS and IDE Files
 .DS_Store
 Thumbs.db
+.vscode/
 
 # Logs and temporary files
 *.log
