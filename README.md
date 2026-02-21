@@ -3,7 +3,6 @@
 A professional, minimalist repository of specialized techniques across academic fields. Powered by **Jekyll** and **Git Metadata**.
 
 ## Features
-- **LeeRob Aesthetic**: Minimalist, high quality typography and design.
 - **Automated Metadata**: Creation and modification dates pulled directly from Git history.
 - **Data-Driven**: Navigation and subject listing managed via SASS and Data files.
 - **MathJax Ready**: Full support for complex LaTeX expressions.
