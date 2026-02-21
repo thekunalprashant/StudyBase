@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Inequalities | Math Compendium</title>
+<title>Inequalities | Compendium Global</title>
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Inequalities" />
 <meta property="og:locale" content="en_US" />
@@ -11,21 +11,18 @@
 <meta property="og:description" content="AM-GM, Cauchy-Schwarz, and rearrangement inequality" />
 <link rel="canonical" href="http://localhost:4000/math-compendium/topics/inequalities/" />
 <meta property="og:url" content="http://localhost:4000/math-compendium/topics/inequalities/" />
-<meta property="og:site_name" content="Math Compendium" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-21T00:00:00+05:30" />
+<meta property="og:site_name" content="Compendium Global" />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Inequalities" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-21T00:00:00+05:30","datePublished":"2026-02-21T00:00:00+05:30","description":"AM-GM, Cauchy-Schwarz, and rearrangement inequality","headline":"Inequalities","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/math-compendium/topics/inequalities/"},"url":"http://localhost:4000/math-compendium/topics/inequalities/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AM-GM, Cauchy-Schwarz, and rearrangement inequality","headline":"Inequalities","url":"http://localhost:4000/math-compendium/topics/inequalities/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/math-compendium/%20/assets/main.css">
-  <link rel="stylesheet" href="/math-compendium/%20/assets/css/custom.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/math-compendium/feed.xml" title="Math Compendium" /><!-- MathJax for math rendering -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/math-compendium/assets/main.css">
+  <link rel="stylesheet" href="/math-compendium/assets/css/custom.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/math-compendium/feed.xml" title="Compendium Global" /><!-- MathJax for math rendering -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script>
@@ -36,72 +33,87 @@
       }
     };
   </script>
-</head><body><header class="site-header" role="banner">
+</head>
+<body><header class="site-header" role="banner">
   <div class="wrapper">
-    
-    <a class="site-title" rel="author" href="/math-compendium/%20/">Math Compendium</a>
-    
+    <a class="site-title" rel="author" href="/math-compendium/">Compendium Global</a>
 
     <nav class="site-nav">
       <div class="trigger">
         <a class="page-link" href="/math-compendium/">Home</a>
-
-        <a class="page-link" href="/math-compendium/topics/">Topics</a>
+        <a class="page-link" href="/math-compendium/subjects/">Subjects</a>
         <a class="page-link" href="/math-compendium/about/">About</a>
-        <a class="page-link" href="https://github.com/thekunalprashant/math-compendium/fork" target="_blank">Contribute
-          ↗</a>
+        <a class="page-link" href="https://github.com/thekunalprashant/math-compendium" target="_blank">Contribute</a>
       </div>
     </nav>
   </div>
-</header><main class="page-content" aria-label="Content">
+</header>
+<main class="page-content" aria-label="Content">
     <article class="post">
 
   <header class="post-header">
+    <div class="wrapper">
+      <h1 class="post-title">Inequalities</h1>
+      <div class="post-meta">
+        
+        
+      </div>
+      
+      <p class="post-description">AM-GM, Cauchy-Schwarz, and rearrangement inequality</p>
+      
+    </div>
   </header>
 
   <div class="post-content">
     <div class="wrapper">
-      <hr />
+      <p>Inequalities are a cornerstone of competitive mathematics, appearing frequently in algebra, number theory, and even geometry. Mastery of these tools allows for rapid bounds-testing and optimization.</p>
 
-<h2 id="introduction-the-power-of-substitution">Introduction: The Power of Substitution</h2>
+<h2>Core Inequalities</h2>
 
-<p>Value substitution is one of the most powerful techniques in competitive mathematics. It transforms complex, intimidating problems into simple, manageable calculations. The essence of this technique lies in recognizing patterns and replacing variables or expressions with strategic values that simplify the problem structure.</p>
+<h3>AM-GM Inequality</h3>
+<p>The Arithmetic Mean-Geometric Mean inequality states that for non-negative real numbers $a_1, a_2, \dots, a_n$:
+\(\frac{a_1 + a_2 + \dots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \dots a_n}\)
+Equality holds if and only if $a_1 = a_2 = \dots = a_n$.</p>
 
-<h3 id="core-principle">Core Principle</h3>
+<h3>Cauchy-Schwarz Inequality</h3>
+<p>For any sequences of real numbers $a_1, a_2, \dots, a_n$ and $b_1, b_2, \dots, b_n$:
+\((a_1^2 + a_2^2 + \dots + a_n^2)(b_1^2 + b_2^2 + \dots + b_n^2) \geq (a_1b_1 + a_2b_2 + \dots + a_nb_n)^2\)</p>
 
-<p>Substitution works because mathematical relationships hold true regardless of the specific values used. By choosing “smart” values, we can bypass algebraic complexity and arrive at solutions directly.</p>
+<h3>Rearrangement Inequality</h3>
+<p>For two sequences of real numbers sorted in the same order $a_1 \leq a_2 \leq \dots \leq a_n$ and $b_1 \leq b_2 \leq \dots \leq b_n$:
+\(a_1b_1 + a_2b_2 + \dots + a_nb_n \geq a_1b_{\sigma(1)} + a_2b_{\sigma(2)} + \dots + a_nb_{\sigma(n)} \geq a_1b_n + a_2b_{n-1} + \dots + a_nb_1\)
+where $\sigma$ is any permutation of ${1, 2, \dots, n}$.</p>
 
-<p>In competitive environments, time is your most precious resource. A problem that might take 3-5 minutes using conventional algebra can often be solved in 12-30 seconds with the right substitution approach. This guide will teach you to identify substitution opportunities instantly and execute them with precision.</p>
 
-<hr />
-
-
-      <div class="post-navigation">
+      <div class="navigation-footer">
+        
+        
         
 
         
 
-        <div class="topic-switcher">
+          <div class="nav-cards">
           
-
-          
-          <div class="nav-direction next">
-            <span class="nav-label">Next Reading</span>
-            <a href="/math-compendium/topics/value-substitution/" class="nav-card">
-              <span class="nav-title">Value Substitution</span>
-              <span class="nav-arrow">→</span>
-            </a>
+          <div class="nav-card disabled">
+            <div class="nav-label">No Previous Topic</div>
           </div>
           
-        </div>
 
-        <hr class="nav-divider">
+          
+          <a href="/math-compendium/subjects/math/" class="nav-card">
+            <div class="nav-label">Next Reading →</div>
+            <div class="nav-title">Mathematics</div>
+          </a>
+          
+      </div>
+      
+      
 
-        <a href="/math-compendium/" class="back-link">
-          <span class="back-arrow">←</span> Back to Home
-        </a>
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="/math-compendium/%20/" class="back-home">Back to Global Home</a>
       </div>
     </div>
+  </div>
   </div>
 
 </article>
@@ -110,19 +122,19 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Math Compendium</h2>
+    <h2 class="footer-heading">Compendium Global</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Math Compendium</li></ul>
+          <li class="p-name">Compendium Global</li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>Competitive mathematics techniques and notes</p>
+        <p>A specialized repository of techniques, strategies, and notes across various academic subjects.</p>
       </div>
     </div>
 
