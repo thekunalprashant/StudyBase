@@ -28,6 +28,16 @@
     text-decoration: none;
 }
 
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .trigger {
+    display: flex;
+    align-items: center;
+}
+
 .site-nav .page-link {
     font-family: var(--font-heading);
     font-weight: 500;
