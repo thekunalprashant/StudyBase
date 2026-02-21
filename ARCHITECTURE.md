@@ -43,6 +43,18 @@ This document explains the purpose of each folder and file in the StudyBase repo
 - **Purpose**: The actual knowledge repository.
 - **Usefulness**: Organized by academic field (e.g., `math/`). Each folder inside contains an `index.md` file which is a specific topic or technique.
 
+## ⚙️ Configuration Files
+
+### `.editorconfig`
+- **Purpose**: Standardizes editor settings.
+- **Usefulness**: Ensures that everyone working on the project uses the same indentation (2 spaces) and character encoding (UTF-8), regardless of which code editor they use (VS Code, Sublime, etc.).
+
+### `.gitignore`
+- **Purpose**: Tells Git what to ignore.
+- **Usefulness**: Prevents "junk" files (like the `_site/` build folder or temporary system files) from being uploaded to GitHub, keeping the repository clean.
+
+---
+
 ### `.github/workflows/`
 - **Purpose**: Automation (GitHub Actions).
 - **Usefulness**: Contains `jekyll-gh-pages.yml`, which handles the professional build and deployment process to GitHub Pages automatically every time you push code.
