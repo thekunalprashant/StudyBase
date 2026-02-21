@@ -16,6 +16,8 @@ A professional, minimalist repository of specialized techniques across academic 
    - View at: `http://localhost:4000/`
 
 ## Architecture
+This project follows a modular Jekyll structure. For a detailed breakdown of every folder and file, see [ARCHITECTURE.md](file:///c:/Users/kunal/Desktop/StudyBase/ARCHITECTURE.md).
+
 - `_sass/`: Modular CSS components.
 - `_data/`: Configuration for navigation and subjects.
 - `_plugins/`: Custom Ruby hooks for Git and site automation.
